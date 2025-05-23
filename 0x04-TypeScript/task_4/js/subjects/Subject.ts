@@ -1,6 +1,10 @@
 namespace Subjects {
 	export class Subject {
-		protected teacher: Teacher | null = null;
+		teacher: Teacher;
+
+		constructor() {
+			this.teacher = {} as Teacher; //Initialize  as empty object
+		}
 
 		setTeacher(teacher: Teacher): void {
 			this.teacher = teacher;

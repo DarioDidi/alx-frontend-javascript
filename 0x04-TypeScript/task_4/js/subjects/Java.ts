@@ -1,3 +1,5 @@
+/// <reference path="Teacher.ts" />
+/// <reference path="Subject.ts" />
 namespace Subjects {
 	export interface Teacher {
 		experienceTeachingJava?: number
@@ -15,5 +17,5 @@ namespace Subjects {
 			}
 		}
 	}
-	export const java = new Subjects.Java();
+	export const java = new Java();
 }

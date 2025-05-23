@@ -1,3 +1,5 @@
+/// <reference path="Teacher.ts" />
+/// <reference path="Subject.ts" />
 namespace Subjects {
 	export interface Teacher {
 		experienceTeachingReact?: number
@@ -15,5 +17,5 @@ namespace Subjects {
 			}
 		}
 	}
-	export const react = new Subjects.React();
+	export const react = new React();
 }
