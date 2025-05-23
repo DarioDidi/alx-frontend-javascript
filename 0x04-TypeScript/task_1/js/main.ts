@@ -34,13 +34,13 @@ interface printTeacherFunction {
 	(firstname: string, lastName: string): string;
 }
 
-const printTeacher: printTeacherFunction = (firstName: string, lastName: string) => {
-	return `${firstName[0]}. ${lastName}`;
-}
-
-//function printTeacher(firstName: string, lastName: string) {
+//const printTeacher: printTeacherFunction = (firstName: string, lastName: string) => {
 //	return `${firstName[0]}. ${lastName}`;
 //}
+
+function printTeacher(firstName: string, lastName: string) {
+	return `${firstName[0]}. ${lastName}`;
+}
 
 console.log(printTeacher(teacher3.firstName, teacher3.lastName));
 
@@ -76,4 +76,5 @@ class StudentClass implements StudentClassInterface {
 		return this.firstName;
 	}
 }
+
 
