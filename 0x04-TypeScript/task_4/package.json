@@ -1,10 +1,14 @@
 {
+  "include": ["js/main.ts"],
   "name": "task_4",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx tsc && node dist/main.js",
+    "clean": "rm -r node_modules/; rm -r dist/; rm package-lock.json;npm i",
+   "build": "tsc"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +16,6 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.4.0",
     "@typescript-eslint/parser": "^2.4.0",
-    "typescript": "^3.6.4"
+    "typescript": "3.6.4"
   }
 }

@@ -2,8 +2,8 @@ interface Teacher {
 	readonly firstName: string;
 	readonly lastName: string;
 	fullTimeEmployee: boolean;
-	yearsOfExperience?: number;
 	location: string;
+	yearsOfExperience?: number;
 	[key: string]: any;
 }
 
@@ -34,29 +34,13 @@ interface printTeacherFunction {
 	(firstname: string, lastName: string): string;
 }
 
-//const printTeacher: printTeacherFunction = (firstName: string, lastName: string) => {
-//	return `${firstName[0]}. ${lastName}`;
-//}
-
-function printTeacher(firstName: string, lastName: string) {
-	return `${firstName[0]}. ${lastName}`;
-}
+const printTeacher: printTeacherFunction = (firstName, lastName) => {
+	const firstLetter = firstName.charAt(0).toUpperCase();
+	return `${firstLetter}. ${lastName}`;
+};
 
 console.log(printTeacher(teacher3.firstName, teacher3.lastName));
 
-
-//class StudentClass {
-//	firstName: string;
-//	lastName: string;
-//	constructor(firstName: string, lastName: string) {
-//		this.firstName = firstName;
-//		this.lastName = lastName;
-//	}
-//
-//	workOnHomework(): string {
-//		return 'Currently working';
-//	}
-//}
 
 interface StudentClassInterface {
 	workOnHomework(): string;
@@ -68,7 +52,12 @@ interface StudentConstructor {
 }
 
 class StudentClass implements StudentClassInterface {
-	constructor(private firstName: string, private lastName: string) { }
+	firstName: string;
+	lastName: string;
+	constructor(firstName: string, lastName: string) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
 	workOnHomework(): string {
 		return "Currently working";
 	}

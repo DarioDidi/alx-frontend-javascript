@@ -12,7 +12,7 @@ let student2: Student = {
 	firstName: "stud2", lastName: "two", age: 60, location: "Algiers"
 }
 
-let students: Student[] = [student1, student2];
+let studentList: Student[] = [student1, student2];
 
 const table = document.createElement("table")
 table.border = "1";
@@ -25,7 +25,7 @@ headerCell2.innerHTML = "Last Name";
 const headerCell3 = header.insertCell();
 headerCell3.innerHTML = "Location";
 
-students.forEach((student) => {
+studentList.forEach((student) => {
 	const row = table.insertRow();
 	const cell1 = row.insertCell();
 	const cell2 = row.insertCell();

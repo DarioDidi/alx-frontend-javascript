@@ -1,47 +1,20 @@
-///// <reference path="Teacher.ts" />
-///// <reference path="Subject.ts" />
-//namespace Subjects {
-//	export interface Teacher {
-//		experienceTeachingC?: number
-//	}
-//
-//	export class Cpp extends Subject {
-//		getRequirements(): string {
-//			return "Here is the list of requirements for Cpp"
-//		}
-//		getAvailableTeacher(): string {
-//			if (this.teacher.experienceTeachingC) {
-//				return `Available Teacher: ${this.teacher.firstName}`;
-//			} else {
-//				return "No available teacher";
-//			}
-//		}
-//	}
-//	export const cpp = new Cpp();
-//}
-
 /// <reference path="Teacher.ts" />
 /// <reference path="Subject.ts" />
-
 namespace Subjects {
 	export interface Teacher {
-		experienceTeachingC?: number
+		experienceTeachingC?: number;
 	}
-
 	export class Cpp extends Subject {
 		getRequirements(): string {
 			return "Here is the list of requirements for Cpp";
 		}
 
 		getAvailableTeacher(): string {
-			if (this.teacher.experienceTeachingC) {
+			if (this.teacher && this.teacher.experienceTeachingC) {
 				return `Available Teacher: ${this.teacher.firstName}`;
 			} else {
 				return "No available teacher";
 			}
 		}
 	}
-
-	// Export the Cpp class and an instance of it
-	export const cpp = new Cpp();
 }

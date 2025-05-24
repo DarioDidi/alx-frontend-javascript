@@ -1,61 +1,51 @@
-///// <reference path="subjects/Teacher.ts" />
-///// <reference path="subjects/Subject.ts" />
-///// <reference path="subjects/Cpp.ts" />
-///// <reference path="subjects/Java.ts" />
-///// <reference path="subjects/React.ts" />
+/// <reference path="../js/subjects/Teacher.ts" />
+/// <reference path="../js/subjects/Subject.ts" />
+/// <reference path="../js/subjects/Cpp.ts" />
+/// <reference path="../js/subjects/Java.ts" />
+/// <reference path="../js/subjects/React.ts" />
+
+console.log(Subjects);
+
+export const cTeacher: Subjects.Teacher = {
+	firstName: "John",
+	lastName: "Doe",
+	experienceTeachingC: 11
+};
 
 
-///namespace Subjects {
-///	const cTeacher: Teacher = {
-///		experienceTeachingC: 10,
-///		firstName: "See",
-///		lastName: "Prof",
-///	}
-///
-///	console.log('C++');
-///	cpp.setTeacher(cTeacher);
-///	console.log(cpp.getRequirements());
-///	console.log(cpp.getAvailableTeacher());
-///
-///	console.log('Java');
-///	java.setTeacher(cTeacher);
-///	console.log(java.getRequirements());
-///	console.log(java.getAvailableTeacher());
-///
-///	console.log('React');
-///	react.setTeacher(cTeacher);
-///	console.log(react.getRequirements());
-///	console.log(react.getAvailableTeacher());
-///}
+export const cpp = new Subjects.Cpp();
+export const java = new Subjects.Java();
+export const react = new Subjects.React();
 
-/// <reference path="subjects/Teacher.ts" />
-/// <reference path="subjects/Cpp.ts" />
-/// <reference path="subjects/React.ts" />
-/// <reference path="subjects/Java.ts" />
+console.log("C++");
+cpp.setTeacher(cTeacher);
+console.log(cpp.getRequirements());
+console.log(cpp.getAvailableTeacher());
 
-namespace Subjects {
-	// Create and export a constant cTeacher with experienceTeachingC = 10
-	const cTeacher: Teacher = {
-		firstName: "John",
-		lastName: "Doe",
-		experienceTeachingC: 10, // Teacher has experience in C++
-	};
+console.log("Java");
+java.setTeacher(cTeacher);
+console.log(java.getRequirements());
+console.log(java.getAvailableTeacher());
 
-	// C++ subject
-	cpp.setTeacher(cTeacher);
-	console.log("C++");
-	console.log(cpp.getRequirements());
-	console.log(cpp.getAvailableTeacher());
+console.log("React");
+react.setTeacher(cTeacher);
+console.log(react.getRequirements());
+console.log(react.getAvailableTeacher());
 
-	// Java subject
-	java.setTeacher(cTeacher);
-	console.log("Java");
-	console.log(java.getRequirements());
-	console.log(java.getAvailableTeacher());
 
-	// React subject
-	react.setTeacher(cTeacher);
-	console.log("React");
-	console.log(react.getRequirements());
-	console.log(react.getAvailableTeacher());
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
