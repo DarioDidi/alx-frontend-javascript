@@ -45,14 +45,11 @@ function isDirector(employee: Director | Teacher): employee is Director {
 	return employee instanceof Director;
 }
 
-// Execute the appropriate work method based on the employee's type
-function executeWork(employee: Director | Teacher): void {
+function executeWork(employee: Director | Teacher): string {
 	if (isDirector(employee)) {
-		// Now TypeScript knows `employee` is a `Director` here
-		console.log(employee.workDirectorTasks());
+		return employee.workDirectorTasks();
 	} else {
-		// Now TypeScript knows `employee` is a `Teacher` here
-		console.log(employee.workTeacherTasks());
+		return employee.workTeacherTasks();
 	}
 }
 

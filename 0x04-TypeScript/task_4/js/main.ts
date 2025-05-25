@@ -9,7 +9,7 @@ console.log(Subjects);
 export const cTeacher: Subjects.Teacher = {
 	firstName: "John",
 	lastName: "Doe",
-	experienceTeachingC: 11
+	experienceTeachingC: 10
 };
 
 
