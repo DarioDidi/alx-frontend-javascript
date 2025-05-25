@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npx tsc && node dist/main.js",
-    "clean": "rm -r node_modules/; rm -r dist/; rm package-lock.json;npm i",
+    "clean": "rm -r node_modules/; rm -r dist/; rm package-lock.json;",
    "build": "tsc"
   },
   "keywords": [],

@@ -7,7 +7,7 @@ console.log(Subjects);
 export var cTeacher = {
     firstName: "John",
     lastName: "Doe",
-    experienceTeachingC: 11
+    experienceTeachingC: 10
 };
 export var cpp = new Subjects.Cpp();
 export var java = new Subjects.Java();
